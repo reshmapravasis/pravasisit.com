@@ -69,6 +69,46 @@
   }
 
   /**
+   * Custom Cursor
+   */
+  const cursorDot = document.createElement("div");
+  const cursorOutline = document.createElement("div");
+  cursorDot.classList.add("custom-cursor-dot");
+  cursorOutline.classList.add("custom-cursor-outline");
+  document.body.appendChild(cursorDot);
+  document.body.appendChild(cursorOutline);
+
+  window.addEventListener("mousemove", (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+    cursorDot.style.opacity = "1";
+
+    cursorOutline.animate({
+      left: `${posX}px`,
+      top: `${posY}px`
+    }, { duration: 500, fill: "forwards" });
+    cursorOutline.style.opacity = "1";
+  });
+
+  document.querySelectorAll('a, button, .btn, .mobile-nav-toggle').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursorOutline.style.width = '60px';
+      cursorOutline.style.height = '60px';
+      cursorOutline.style.borderColor = 'rgba(66, 133, 236, 0.8)';
+      cursorOutline.style.backgroundColor = 'rgba(66, 133, 236, 0.1)';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursorOutline.style.width = '30px';
+      cursorOutline.style.height = '30px';
+      cursorOutline.style.borderColor = 'rgba(66, 133, 236, 0.5)';
+      cursorOutline.style.backgroundColor = 'transparent';
+    });
+  });
+
+  /**
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
