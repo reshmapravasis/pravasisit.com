@@ -3,15 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>PITS | Innovative IT Services</title>
-    <meta
-      name="description"
-      content="Discover PITS Pvt Ltd - delivering innovative IT solutions for financial institutions since 2008. Trusted by over 500 clients, we specialize in software tailored to cooperative societies, banks, and more."
-    />
-    <meta
-      name="keywords"
-      content="IT solutions, financial software, cooperative banks, custom software development, PITS, Kerala IT company, innovative IT services"
-    />
+    <title>PITS | Innovative IT Services for Financial Institutions</title>
+    <meta name="description" content="PITS (formerly PITS) delivers innovative software for financial institutions, cooperative societies, and banks. Trusted by 500+ clients across Kerala.">
+    <meta name="keywords" content="PITS, financial software, cooperative society software, Nidhi company software, Kerala IT company, Sahakari MIS, Rio Agent Collect">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pravasisit.com/">
+    <meta property="og:title" content="PITS | Innovative IT Services for Financial Institutions">
+    <meta property="og:description" content="Delivering cutting-edge IT solutions for financial institutions since 2008. Trusted by over 500 clients.">
+    <meta property="og:image" content="https://pravasisit.com/assets/img/pits_logo_blue.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pravasisit.com/">
+    <meta property="twitter:title" content="PITS | Innovative IT Services for Financial Institutions">
+    <meta property="twitter:description" content="Delivering cutting-edge IT solutions for financial institutions since 2008. Trusted by over 500 clients.">
+    <meta property="twitter:image" content="https://pravasisit.com/assets/img/pits_logo_blue.webp">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PITS Pvt Ltd",
+      "image": "https://pravasisit.com/assets/img/pits_logo_blue.webp",
+      "url": "https://pravasisit.com",
+      "telephone": "+919037014455",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nechikkadan Building, 1st Floor, Up Hill",
+        "addressLocality": "Malappuram",
+        "postalCode": "676505",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.0734,
+        "longitude": 76.0740
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
 
     <!-- Favicons -->
     <link href="assets/img/favicon.ico" rel="icon" />
@@ -65,8 +105,7 @@
         class="container-fluid container-xl position-relative d-flex align-items-center"
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <img src="assets/img/pits_logo.webp" alt="PITS" style="height: 45px; margin-right: 10px;">
-          <h1 class="siteheading" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: -1.5px; font-size: 28px; margin: 0;">PITS</h1>
+          <img src="assets/img/pits_logo_blue.webp" alt="PITS" style="height: 60px;">
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -88,11 +127,18 @@
 
     <main class="main">
       <!-- Hero Section -->
-      <section id="hero" class="hero section dark-background d-flex align-items-center justify-content-center" style="min-height: 100vh; position: relative; overflow: hidden; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/hero_tech.webp') center/cover no-repeat;">
-        <div class="container text-center" data-aos="fade-up">
+      <section id="hero" class="hero section dark-background d-flex align-items-center justify-content-center" style="min-height: 100vh; position: relative; overflow: hidden; background: #020b18;">
+
+        <!-- Animated Canvas Background -->
+        <canvas id="hero-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
+
+        <!-- Animated Gradient Overlay -->
+        <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(0,80,200,0.18) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(0,210,255,0.10) 0%, transparent 50%); z-index: 1; pointer-events: none;"></div>
+
+        <div class="container text-center position-relative" style="z-index: 2;" data-aos="fade-up">
           <div class="row justify-content-center">
             <div class="col-lg-10">
-              <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -2px;">
+              <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px;">
                 Your Trusted Partner for <span style="color: var(--accent-color); background: linear-gradient(90deg, #4285EC, #00D2FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Innovative IT Solutions</span>
               </h1>
               <p class="lead" style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.6); max-width: 800px; margin: 0 auto 40px;">
@@ -104,7 +150,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="row mt-5 pt-5" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-3 col-6">
               <div class="stats-item">
@@ -132,12 +178,126 @@
             </div>
           </div>
         </div>
-        
-        <!-- Abstract Glow Elements -->
-        <div style="position: absolute; top: -10%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(66, 133, 236, 0.15) 0%, transparent 70%); filter: blur(50px); pointer-events: none;"></div>
-        <div style="position: absolute; bottom: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, transparent 70%); filter: blur(50px); pointer-events: none;"></div>
+
+        <!-- Floating Glow Orbs -->
+        <div style="position: absolute; top: 10%; right: 8%; width: 320px; height: 320px; background: radial-gradient(circle, rgba(66,133,236,0.18) 0%, transparent 70%); filter: blur(40px); z-index: 1; pointer-events: none; animation: hero-orb-float 8s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: 12%; left: 5%; width: 280px; height: 280px; background: radial-gradient(circle, rgba(0,210,255,0.13) 0%, transparent 70%); filter: blur(40px); z-index: 1; pointer-events: none; animation: hero-orb-float 11s ease-in-out infinite reverse;"></div>
+        <div style="position: absolute; top: 55%; right: 25%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(100,50,255,0.10) 0%, transparent 70%); filter: blur(35px); z-index: 1; pointer-events: none; animation: hero-orb-float 14s ease-in-out infinite;"></div>
+
+        <style>
+          @keyframes hero-orb-float {
+            0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
+            50% { transform: translateY(-30px) scale(1.08); opacity: 1; }
+          }
+        </style>
       </section>
       <!-- /Hero Section -->
+
+      <script>
+        (function () {
+          const canvas = document.getElementById('hero-canvas');
+          if (!canvas) return;
+          const ctx = canvas.getContext('2d');
+          let W, H, nodes, animId;
+
+          function resize() {
+            const section = canvas.parentElement;
+            W = canvas.width = section.offsetWidth;
+            H = canvas.height = section.offsetHeight;
+          }
+
+          function createNodes(count) {
+            return Array.from({ length: count }, () => ({
+              x: Math.random() * W,
+              y: Math.random() * H,
+              r: Math.random() * 2.5 + 1,
+              vx: (Math.random() - 0.5) * 0.45,
+              vy: (Math.random() - 0.5) * 0.45,
+              pulse: Math.random() * Math.PI * 2,
+              pulseSpeed: Math.random() * 0.02 + 0.008,
+              color: Math.random() > 0.5 ? '#4285EC' : '#00D2FF',
+              opacity: Math.random() * 0.5 + 0.3,
+            }));
+          }
+
+          function draw() {
+            ctx.clearRect(0, 0, W, H);
+
+            /* Grid lines (subtle) */
+            ctx.strokeStyle = 'rgba(66,133,236,0.04)';
+            ctx.lineWidth = 1;
+            for (let x = 0; x < W; x += 60) {
+              ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+            }
+            for (let y = 0; y < H; y += 60) {
+              ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+            }
+
+            /* Connections */
+            const maxDist = 160;
+            for (let i = 0; i < nodes.length; i++) {
+              for (let j = i + 1; j < nodes.length; j++) {
+                const dx = nodes[i].x - nodes[j].x;
+                const dy = nodes[i].y - nodes[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < maxDist) {
+                  const alpha = (1 - dist / maxDist) * 0.25;
+                  const grad = ctx.createLinearGradient(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y);
+                  grad.addColorStop(0, `rgba(66,133,236,${alpha})`);
+                  grad.addColorStop(1, `rgba(0,210,255,${alpha})`);
+                  ctx.beginPath();
+                  ctx.strokeStyle = grad;
+                  ctx.lineWidth = 0.8;
+                  ctx.moveTo(nodes[i].x, nodes[i].y);
+                  ctx.lineTo(nodes[j].x, nodes[j].y);
+                  ctx.stroke();
+                }
+              }
+            }
+
+            /* Nodes */
+            nodes.forEach(n => {
+              n.pulse += n.pulseSpeed;
+              const glow = Math.sin(n.pulse) * 0.4 + 0.6;
+              const radius = n.r * (1 + Math.sin(n.pulse) * 0.3);
+
+              /* Glow halo */
+              const halo = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, radius * 6);
+              halo.addColorStop(0, n.color.replace(')', `,${n.opacity * glow * 0.5})`).replace('rgb', 'rgba'));
+              halo.addColorStop(1, 'rgba(0,0,0,0)');
+              ctx.beginPath();
+              ctx.arc(n.x, n.y, radius * 6, 0, Math.PI * 2);
+              ctx.fillStyle = halo;
+              ctx.fill();
+
+              /* Core dot */
+              ctx.beginPath();
+              ctx.arc(n.x, n.y, radius, 0, Math.PI * 2);
+              ctx.fillStyle = n.color;
+              ctx.globalAlpha = n.opacity * glow;
+              ctx.fill();
+              ctx.globalAlpha = 1;
+
+              /* Move */
+              n.x += n.vx;
+              n.y += n.vy;
+              if (n.x < 0 || n.x > W) n.vx *= -1;
+              if (n.y < 0 || n.y > H) n.vy *= -1;
+            });
+
+            animId = requestAnimationFrame(draw);
+          }
+
+          window.addEventListener('resize', () => {
+            resize();
+            nodes = createNodes(Math.floor((W * H) / 16000));
+          });
+
+          resize();
+          nodes = createNodes(Math.floor((W * H) / 16000));
+          draw();
+        })();
+      </script>
 
       <!-- About Section -->
       <section id="about" class="about section dark-background" style="background: #050505;">
@@ -595,7 +755,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: -1px;">Pravasis <span style="color: var(--accent-color);">IT</span> Solutions</span>
+              <span class="sitename" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: -1px;">Pravasis <span style="color: #e53935;">I</span><span style="color: var(--accent-color);">T</span> Solutions</span>
             </a>
             <p style="color: rgba(255,255,255,0.5); margin-top: 20px; font-size: 1rem;">
               Empowering financial institutions with cutting-edge technology and reliable IT support since 2008.
@@ -647,7 +807,7 @@
 
       <div class="container copyright text-center mt-5 pt-4" style="border-top: 1px solid rgba(255,255,255,0.05);">
         <p style="color: rgba(255,255,255,0.4); font-size: 0.9rem;">
-          © 2025 <strong class="px-1 sitename">PITS Pvt Ltd</strong>. All Rights Reserved.
+          © 2026 <strong>PITS Pvt Ltd</strong> All Rights Reserved
         </p>
       </div>
     </footer>

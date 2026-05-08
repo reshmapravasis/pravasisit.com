@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | PITS</title>
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .error-page {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #000;
+            color: #fff;
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, #4285EC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+        .error-message {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        .btn-back-home {
+            background: var(--accent-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-back-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(66, 133, 236, 0.3);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="container">
+            <h1 class="error-code">404</h1>
+            <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
+            <a href="index.html" class="btn btn-back-home">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
