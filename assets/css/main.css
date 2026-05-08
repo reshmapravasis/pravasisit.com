@@ -12,22 +12,22 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Poppins", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font: "Inter", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --heading-font: "Plus Jakarta Sans", "Inter", sans-serif;
+  --nav-font: "Inter", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff;
+  --background-color: #000000;
   /* Background color for the entire website, including individual sections */
-  --default-color: #212529;
+  --default-color: rgba(255, 255, 255, 0.7);
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #001973;
+  --heading-color: #ffffff;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0d42ff;
+  --accent-color: #4285EC;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff;
+  --surface-color: rgba(255, 255, 255, 0.05);
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -52,15 +52,16 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f7f9fc;
-  --surface-color: #ffffff;
+  --background-color: #0a0a0a;
+  --surface-color: rgba(255, 255, 255, 0.03);
+  --default-color: rgba(255, 255, 255, 0.7);
 }
 
 .dark-background {
-  --background-color: #010911;
-  --default-color: #ffffff;
+  --background-color: #000000;
+  --default-color: rgba(255, 255, 255, 0.7);
   --heading-color: #ffffff;
-  --surface-color: #19335c;
+  --surface-color: rgba(255, 255, 255, 0.08);
   --contrast-color: #ffffff;
 }
 
@@ -260,13 +261,16 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgba(0, 0, 0, 0.5);
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 
@@ -301,10 +305,12 @@ h6 {
   color: var(--contrast-color);
   background: var(--accent-color);
   font-size: 14px;
-  padding: 8px 25px;
+  padding: 10px 30px;
   margin: 0 0 0 30px;
-  border-radius: 4px;
+  border-radius: 50px;
   transition: 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 768px) {
@@ -352,7 +358,8 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(14, 29, 52, 0.9);
+  --background-color: rgba(0, 0, 0, 0.8);
+  padding: 12px 0;
 }
 
 /*--------------------------------------------------------------
@@ -806,19 +813,20 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--heading-color);
+  background-color: #000000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 160px 0 80px 0;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .page-title:before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: radial-gradient(circle at 50% 50%, rgba(66, 133, 236, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
   position: absolute;
   inset: 0;
 }
@@ -887,33 +895,28 @@ section,
 .section-title {
   text-align: center;
   padding: 30px 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   position: relative;
 }
 
 .section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
   margin-bottom: 20px;
   padding-bottom: 0;
   position: relative;
   z-index: 2;
-  font-display: swap;
+  letter-spacing: -1px;
 }
 
 .section-title span {
-  position: absolute;
-  top: 4px;
-  color: color-mix(in srgb, var(--heading-color), transparent 95%);
-  left: 0;
-  right: 0;
-  z-index: 1;
+  display: block;
+  color: var(--accent-color);
   font-weight: 700;
-  font-size: 52px;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  line-height: 1;
-  font-display: swap;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .section-title p {
